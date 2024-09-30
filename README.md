@@ -1,6 +1,4 @@
-Physical Computing Project 2024 - IT KMITL
-
-# RUBetterThanGoldenFish
+# Physical Computing Project 2024 - IT KMITL
 
 สมาชิก
 
