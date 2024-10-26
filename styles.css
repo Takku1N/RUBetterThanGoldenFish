@@ -67,6 +67,7 @@ main {
     align-items: center;
     position: relative;
     background-color: #D3D3D3;
+    min-height: 82vh;
 }
 
 
@@ -128,19 +129,38 @@ footer {
 }
 
 .container-main {
-    width: 80%;
-    min-height: 1000px;
+    width: 30%;
     display: flex;
+    flex-direction: column;
     align-items: center;
-    justify-content: center;
     background-color: white;
-    margin-top: 20px;
+    margin-top: 50px;
     margin-bottom: 20px;
     border-radius: 10px;
-    .component {
+    padding: 25px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.799);
+    .component-box {
         display: flex;
-        justify-content: space-around;
+        justify-content: center;
+        width: 40vh;
+        .small-left, .small-right {
+            padding: 5px;
+            color: black;
+            border: 1px solid black;
+        }
+        .small-left{
+            text-align: right;
+            width: 10vh;
+        }
+        .small-right {
+            flex: 1;
+        }
     }
+}
+
+.store {
+    background-image: url(./img/SupermarketBG.jpg);
+    background-size: cover;
 }
 
 /* Responsive Design: Stack sections on smaller screens */

@@ -8,7 +8,6 @@
     <script src="paho.javascript-1.0.3/paho-mqtt.js"></script>
 <script>
 
-
     function startConnect(){
         client = new Paho.MQTT.Client("mqttdashboard.com", Number(8000), "dfsakhfljkasfhlajalhflajksbc");
         client.onConnectionLost = onConnectionLost;
@@ -34,7 +33,8 @@
 
     function onMessageArrived(message) {
     console.log("onMessageArrived:"+message.payloadString);
-    document.getElementById("messages").innerHTML += "<br> "+ message.payloadString + "";
+    document.getElementById("messages").innerHTML += message.payloadString + "";
+    // document.getElementById("messages").innerHTML += "<br> "+ message.payloadString + "";
     }
     function startDisconnect(){
         client.disconnect();
@@ -60,9 +60,48 @@
         </nav>
     </header>
 
-    <main>
+    <main class="store">
         <section class="container-main" id="#main">
-            <div class="component" id="messages">Slot 1: </div>
+            <div class="component-box">
+                <div class="small-left">Slot 1</div>
+                <div class="small-right" id="messages"></div>
+            </div>
+            <div class="component-box">
+                <div class="small-left">Slot 2</div>
+                <div class="small-right">Not Available</div>
+            </div>
+            <div class="component-box">
+                <div class="small-left">Slot 3</div>
+                <div class="small-right">Not Available</div>
+            </div>
+            <div class="component-box">
+                <div class="small-left">Slot 4</div>
+                <div class="small-right">Not Available</div>
+            </div>
+            <div class="component-box">
+                <div class="small-left">Slot 5</div>
+                <div class="small-right">Not Available</div>
+            </div>
+            <div class="component-box">
+                <div class="small-left">Slot 6</div>
+                <div class="small-right">Not Available</div>
+            </div>
+            <div class="component-box">
+                <div class="small-left">Slot 7</div>
+                <div class="small-right">Not Available</div>
+            </div>
+            <div class="component-box">
+                <div class="small-left">Slot 8</div>
+                <div class="small-right">Not Available</div>
+            </div>
+            <div class="component-box">
+                <div class="small-left">Slot 9</div>
+                <div class="small-right">Not Available</div>
+            </div>
+            <div class="component-box">
+                <div class="small-left">Slot 10</div>
+                <div class="small-right">Not Available</div>
+            </div>
         </section>
         
     </main>
