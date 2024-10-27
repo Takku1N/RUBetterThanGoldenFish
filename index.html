@@ -30,17 +30,18 @@
     if (responseObject.errorCode !== 0) {
         console.log("onConnectionLost:"+responseObject.errorMessage);
     }
+    startConnect();
     }
 
     function onMessageArrived(message) {
     console.log("onMessageArrived:"+message.payloadString);
-    document.getElementById("messages").innerHTML += message.payloadString + "";
+    document.getElementById("messages").innerHTML = message.payloadString + "";
     // document.getElementById("messages").innerHTML += "<br> "+ message.payloadString + "";
     }
     function startDisconnect(){
         client.disconnect();
         console.log("Disconnect");
-        document.getElementById("messages").innerHTML += "<br><span> Disconnected. </span>";
+        document.getElementById("messages").innerHTML = "<br><span> Disconnected. </span>";
     }
 
     startConnect();
