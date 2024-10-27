@@ -10,7 +10,7 @@
 
 
     function startConnect(){
-        client = new Paho.MQTT.Client("mqttdashboard.com", Number(8000), "dfsakhfljkasfhlajalhflajksbc");
+        client = new Paho.MQTT.Client("wss://mqttdashboard.com:8884/mqtt", "dfsakhfljkasfhlajalhflajksbc");
         client.onConnectionLost = onConnectionLost;
         client.onMessageArrived = onMessageArrived;
         
