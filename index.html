@@ -21,7 +21,7 @@
     function onConnect() {
     console.log("onConnect");
     client.subscribe("rubetterthangoldfish/1");
-    message = new Paho.MQTT.Message("Hello MQTT");
+    message = new Paho.MQTT.Message("Waiting...");
     message.destinationName = "rubetterthangoldfish/1";
     client.send(message);
     }
@@ -30,18 +30,18 @@
     if (responseObject.errorCode !== 0) {
         console.log("onConnectionLost:"+responseObject.errorMessage);
     }
-    startConnect();
     }
 
     function onMessageArrived(message) {
     console.log("onMessageArrived:"+message.payloadString);
-    document.getElementById("messages").innerHTML = message.payloadString + "";
+    // document.getElementById("messages").innerHTML += message.payloadString + "";
     // document.getElementById("messages").innerHTML += "<br> "+ message.payloadString + "";
+    document.getElementById("messages").innerHTML = message.payloadString + "";
     }
     function startDisconnect(){
         client.disconnect();
         console.log("Disconnect");
-        document.getElementById("messages").innerHTML = "<br><span> Disconnected. </span>";
+        document.getElementById("messages").innerHTML += "<br><span> Disconnected. </span>";
     }
 
     startConnect();
