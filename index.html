@@ -6,8 +6,8 @@
     <title>Check Slot</title>
     <link rel="stylesheet" href="styles.css">
     <script src="paho.javascript-1.0.3/paho-mqtt.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 <script>
-
 
     function startConnect(){
         client = new Paho.MQTT.Client("wss://mqttdashboard.com:8884/mqtt", "dfsakhfljkasfhlajalhflajksbc");
@@ -34,7 +34,8 @@
 
     function onMessageArrived(message) {
     console.log("onMessageArrived:"+message.payloadString);
-    document.getElementById("messages").innerHTML += "<br> "+ message.payloadString + "";
+    document.getElementById("messages").innerHTML += message.payloadString + "";
+    // document.getElementById("messages").innerHTML += "<br> "+ message.payloadString + "";
     }
     function startDisconnect(){
         client.disconnect();
@@ -50,7 +51,7 @@
     <!-- Header -->
     <header>
         <nav>
-            <a href="#main">Check Slot</a>
+            <a href="#main"><i class="fas fa-home"></i> Check Slot</a>
             <ul>
                 <li><a href="./detail.html#about">About</a></li>
                 <li><a href="./detail.html#code">Code</a></li>
@@ -60,16 +61,55 @@
         </nav>
     </header>
 
-    <main>
+    <main class="store">
         <section class="container-main" id="#main">
-            <div class="component" id="messages">Slot 1: </div>
+            <div class="component-box">
+                <div class="small-left">Slot 1</div>
+                <div class="small-right" id="messages"></div>
+            </div>
+            <div class="component-box">
+                <div class="small-left">Slot 2</div>
+                <div class="small-right">Not Available</div>
+            </div>
+            <div class="component-box">
+                <div class="small-left">Slot 3</div>
+                <div class="small-right">Not Available</div>
+            </div>
+            <div class="component-box">
+                <div class="small-left">Slot 4</div>
+                <div class="small-right">Not Available</div>
+            </div>
+            <div class="component-box">
+                <div class="small-left">Slot 5</div>
+                <div class="small-right">Not Available</div>
+            </div>
+            <div class="component-box">
+                <div class="small-left">Slot 6</div>
+                <div class="small-right">Not Available</div>
+            </div>
+            <div class="component-box">
+                <div class="small-left">Slot 7</div>
+                <div class="small-right">Not Available</div>
+            </div>
+            <div class="component-box">
+                <div class="small-left">Slot 8</div>
+                <div class="small-right">Not Available</div>
+            </div>
+            <div class="component-box">
+                <div class="small-left">Slot 9</div>
+                <div class="small-right">Not Available</div>
+            </div>
+            <div class="component-box">
+                <div class="small-left">Slot 10</div>
+                <div class="small-right">Not Available</div>
+            </div>
         </section>
         
     </main>
 
     <!-- Footer -->
     <footer>
-        <p>&copy; 2024 Copyright. <a href="#">PhysicalProject.com</a></p>
+        <p>&copy; 2024 Copyright. <a href="https://github.com/Takku1N/RUBetterThanGoldenFish">PhysicalProject.com</a></p>
     </footer>
 </body>
 </html>
