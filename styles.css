@@ -198,25 +198,21 @@ footer {
 }
 
 @media (max-width: 500px) {
-    header {
-        a {
-            font-size: 18px;
-        }
-        ul li a {
-            font-size: 14px;
-        }
+    header a {
+        font-size: 18px;
     }
-    .container {
-        .member-list {
-            flex-direction: column;
-        }
-        .big-component {
-            height: auto;
-            flex-direction: column;
-            img {
-                max-width: 20rem;
-                margin-bottom: 2rem;
-            }
-        }
+    header ul li a {
+        font-size: 14px;
+    }
+    .container .member-list {
+        flex-direction: column;
+    }
+    .container .big-component {
+        height: auto;
+        flex-direction: column;
+    }
+    .container .big-component img {
+        max-width: 20rem;
+        margin-bottom: 2rem;
     }
 }
