@@ -56,6 +56,12 @@ header {
     }
 }
 
+.poster {
+    max-height: 60rem;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.525);
+    border-radius: 10px;
+}
+
 main {
     display: flex;
     flex-direction: column;
