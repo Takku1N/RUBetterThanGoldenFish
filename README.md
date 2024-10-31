@@ -10,6 +10,9 @@ https://takku1n.github.io/RUBetterThanGoldenFish/index.html
 # WebSite
 https://takku1n.github.io/RUBetterThanGoldenFish/detail.html
 
+# Video
+https://youtu.be/hwfSvwbEGvs?si=NptsbkUPZctFH9vq
+
 # สมาชิก
 - 66070308 วีรภัทร์ เศรษฐชัยน้อย
 - 66070314 สิรวิชญ์ จันทร์เต็มดวง
